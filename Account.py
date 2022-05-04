@@ -18,11 +18,13 @@ class Account:
 
 
     def run(self):
-        pass
+        print("This is working.")
 
 
 if __name__ == "__main__":
-    app =
+    app = Account("Gmail", "www.gmail.com", "twertz", "password", "01/17/2022")
+
+
 
 
 
