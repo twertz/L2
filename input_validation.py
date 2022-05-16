@@ -57,9 +57,9 @@ def input_float(prompt=None, error=None, gt=None, ge=None, lt=None, le=None):
 
 def input_string(prompt=None, error=None, is_valid=None):
     if prompt is None:
-        prompt = "Please enter a : "
+        prompt = "Please type something: "
     if error is None:
-        error = "That doesn't seem like your favorite color."
+        error = "That isn't correct."
 
     while True:
         string_input = input(prompt)
