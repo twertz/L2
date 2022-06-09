@@ -1,7 +1,6 @@
 import datetime
 import time
-import input_validation
-from input_validation import *
+import TwoFactorAccount
 
 
 class Account:
@@ -49,31 +48,11 @@ class Account:
     def get_date_time(self):
         return self.__date_password_changed.strftime("%m-%d-%Y %H:%M:%S")
 
-class TwoFactorAccount(Account):
-    __two_factor_type = None
-    __two_factor_answer = None
-
-    def __init__(self, two_factor_type, two_factor_answer, *args, **kwargs):
-        self.__two_factor_type = two_factor_type
-        self.__two_factor_answer = two_factor_answer
-        super().__init__(*args, **kwargs)
-
-    def get_two_factor_type(self):
-        return self.__two_factor_type
-
-    def set_two_factor_type(self, two_factor_type):
-        self.__two_factor_type = two_factor_type
-
-    def get_two_factor_answer(self):
-        return self.__two_factor_answer
-
-    def set_two_factor_answer(self, two_factor_answer):
-        self.__two_factor_answer = two_factor_answer
-
 
 if __name__ == "__main__":
     app = Account("google", "www.gmail.com", "twertz", "checkmeout", datetime.datetime.now())
-    app2 = TwoFactorAccount("pin", 241015, "hotmail", "www.hotmail.com", "wertzt", "outmecheck", datetime.datetime.now())
+    app2 = TwoFactorAccount("pin", 241015, "hotmail", "www.hotmail.com", "wertzt", "outmecheck",
+                            datetime.datetime.now())
     print(app.get_website())
     print(app.get_login_url())
     print(app.get_username())

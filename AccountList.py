@@ -1,6 +1,5 @@
 from Account import Account, TwoFactorAccount
 import datetime
-import time
 
 
 class AccountList:
@@ -16,8 +15,8 @@ class AccountList:
         self.account_list.append(account)
 
     def show_account_list(self):
-        print (f"The {self.__list_name} list with security importance {self.__security_scale} contains the following "
-               f"accounts: ")
+        print(f"The {self.__list_name} list with security importance {self.__security_scale} contains the following "
+              f"accounts: ")
         for item in self.account_list:
             print(item)
 
